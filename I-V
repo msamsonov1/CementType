@@ -1,0 +1,32 @@
+# Input the conditions
+marine = input("Is the concrete in a marine environment? (y/n): ")
+highway = input("Is the concrete for a highway project requiring fast cure? (y/n): ")
+cold = input("Is the concrete for use in cold weather? (y/n): ")
+sulfate = input("Is the concrete exposed to sulfate attack? (y/n): ")
+dams = input("Is the concrete for use in dam construction? (y/n): ")
+mat_foundations = input("Is the concrete for use in mat foundations? (y/n): ")
+bridges = input("Is the concrete for use in bridge construction? (y/n): ")
+high_alkaline = input("Is the soil highly alkaline? (y/n): ")
+
+# Determine the type of cement to use based on the conditions
+if marine == "y":
+    cement_type = "Type V"
+elif highway == "y":
+    cement_type = "Type III"
+elif cold == "y":
+    cement_type = "Type III or Type IV"
+elif sulfate == "y":
+    cement_type = "Type II or Type V"
+elif dams == "y":
+    cement_type = "Type II or Type V"
+elif mat_foundations == "y":
+    cement_type = "Type II or Type V"
+elif bridges == "y":
+    cement_type = "Type II or Type V"
+elif high_alkaline == "y":
+    cement_type = "Type II or Type V"
+else:
+    cement_type = "Type I or Type II"
+
+# Output the result
+print("Use {} cement for this project.".format(cement_type))
